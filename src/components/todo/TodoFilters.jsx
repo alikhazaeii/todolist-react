@@ -5,7 +5,7 @@ const FILTERS = ['all', 'active', 'completed'];
 
 export function TodoFilters({ activeFilter, onFilterChange }) {
   return (
-    <div className="flex justify-center gap-2">
+    <div className="flex justify-center gap-5">
       {FILTERS.map((filter) => (
         <Button
           key={filter}

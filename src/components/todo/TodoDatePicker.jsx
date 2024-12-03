@@ -19,7 +19,7 @@ export function TodoDatePicker({ dueDate, onDateChange }) {
   if (!isEditing && !dueDate) {
     return (
       <Button variant="ghost" size="sm" onClick={() => setIsEditing(true)}>
-        <Calendar className="w-5 h-5" />
+        <Calendar className="w-5 h-5 " />
       </Button>
     );
   }
@@ -32,7 +32,7 @@ export function TodoDatePicker({ dueDate, onDateChange }) {
           value={dueDate ? formatDateTimeInput(dueDate) : ''}
           onChange={handleDateChange}
           onBlur={() => setIsEditing(false)}
-          className="px-2 py-1 text-sm border rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="px-2 py-1 text-sm border-none rounded focus:outline-none focus:ring-1 focus:ring-red-500"
           autoFocus
         />
       ) : (

@@ -46,10 +46,10 @@ export function TodoItem({ todo, onToggle, onDelete, onDateChange, onTextChange 
           'w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors',
           todo.completed
             ? 'bg-green-500 border-green-500'
-            : 'border-gray-300 hover:border-green-500'
+            : 'border-red-900 bg-red-800 hover:border-green-500'
         )}
       >
-        {todo.completed && <Check className="w-4 h-4 text-white" />}
+        {todo.completed && <Check className="w-6 h-6 text-white" />}
       </button>
 
       <div className="flex-1 flex flex-col">
@@ -59,26 +59,26 @@ export function TodoItem({ todo, onToggle, onDelete, onDateChange, onTextChange 
             value={editText}
             onChange={(e) => setEditText(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="px-2 py-1 border rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="px-2 py-1 border rounded focus:outline-none focus:ring-1 focus:ring-red-500"
             autoFocus
           />
         ) : (
           <span
             className={clsx(
-              todo.completed ? 'text-gray-400 line-through' : 'text-gray-700'
+              todo.completed ? 'text-green-400 line-through text-xl' : 'text-red-500 text-xl'
             )}
           >
             {todo.text}
           </span>
         )}
         {todo.dueDate && (
-          <span className="text-xs text-gray-500">
+          <span className="text-xs text-red-500">
             Due: {todo.dueDate.toLocaleString()}
           </span>
         )}
       </div>
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 text-black">
         <TodoDatePicker
           dueDate={todo.dueDate}
           onDateChange={(date) => onDateChange(todo.id, date)}
@@ -87,20 +87,20 @@ export function TodoItem({ todo, onToggle, onDelete, onDateChange, onTextChange 
         {isEditing ? (
           <>
             <Button variant="success" size="sm" onClick={handleSave}>
-              <Save className="w-5 h-5" />
+              <Save className="w-5 h-5 " />
             </Button>
             <Button variant="ghost" size="sm" onClick={handleCancel}>
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5 text-black" />
             </Button>
           </>
         ) : (
           <Button variant="ghost" size="sm" onClick={handleEdit}>
-            <Edit2 className="w-5 h-5" />
+            <Edit2 className="w-5 h-5 text-black" />
           </Button>
         )}
         
         <Button variant="danger" size="sm" onClick={() => onDelete(todo.id)}>
-          <Trash2 className="w-5 h-5" />
+          <Trash2 className="w-5 h-5 text-red-800" />
         </Button>
       </div>
     </div>
