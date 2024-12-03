@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { TodoHeader } from './components/todo/TodoHeader';
-import { TodoInput } from './components/todo/TodoInput';
-import { TodoList } from './components/todo/TodoList';
-import { TodoFilters } from './components/todo/TodoFilters';
-import { TodoStats } from './components/todo/TodoStats';
-import { useTodos } from './hooks/useTodos';
+import { TodoHeader } from './components/todo/TodoHeader.jsx';
+import { TodoInput } from './components/todo/TodoInput.jsx';
+import { TodoList } from './components/todo/TodoList.jsx';
+import { TodoFilters } from './components/todo/TodoFilters.jsx';
+import { TodoStats } from './components/todo/TodoStats.jsx';
+import { useTodos } from './hooks/usetodos.js';
 
 function App() {
   const { todos, addTodo, toggleTodo, deleteTodo, updateTodoDueDate, updateTodoText } = useTodos();
