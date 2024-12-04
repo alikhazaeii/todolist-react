@@ -7,6 +7,7 @@ import { TodoStats } from './components/todo/TodoStats.jsx';
 import { useTodos } from './hooks/usetodos.js';
 import Cursor from './components/todo/cursor.jsx';
 import ParticleCanvas from './components/todo/ParticleCanvas.jsx';
+import { Profile } from './components/todo/profile.jsx';
 'use client'
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen cursor-none ">
+      <Profile/>
       <div className="max-w-2xl mx-auto py-12 px-4 relative z-20 ">
         <TodoHeader />
 
