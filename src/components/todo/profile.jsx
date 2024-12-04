@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import ProfileImg from './../img/profit.jpg'
-import Cursor from './cursor'
-import { Filter } from 'lucide-react'
 export const Profile = () => {
 
   return (
