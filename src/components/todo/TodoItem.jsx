@@ -46,7 +46,7 @@ export function TodoItem({ todo, onToggle, onDelete, onDateChange, onTextChange 
           'w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors',
           todo.completed
             ? 'bg-green-500 border-green-500'
-            : 'border-red-900 bg-red-800 hover:border-green-500'
+            : 'border-red-900  hover:border-green-500'
         )}
       >
         {todo.completed && <Check className="w-6 h-6 text-white" />}

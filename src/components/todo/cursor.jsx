@@ -38,13 +38,16 @@ export default function Cursor({hover}) {
     
     <div 
       ref={circle}
-      className='fixed top-0 left-0 bg-[#ffffff] rounded-full translate-x-[-50%] translate-y-[-50%] mix-blend-difference pointer-events-none  '
+      className='fixed top-0 left-0 bg-white rounded-full translate-x-[-50%] translate-y-[-50%] mix-blend-difference pointer-events-none flex justify-center items-center '
       style={{
         width: size,
         height: size,
         filter:`blur(${hover?20 : 0}px)`,
         transition:'filter 0.2s ease-out , height 0.2s ease-out , width 0.2s ease-out'
-      }} />
-
+      }} 
+         
+         />
+         
+      
   )
 }
